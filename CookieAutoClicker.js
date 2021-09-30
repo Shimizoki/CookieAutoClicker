@@ -9,17 +9,10 @@
 // @grant        none
 // ==/UserScript==
 
-
-if(AutoClicker === undefined) var AutoClicker = {};
-if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/' + (0? 'Beta/' : '') + 'CCSE.js');
-AutoClicker.name = 'AutoClicker';
-AutoClicker.version = '0.1';
-AutoClicker.GameVersion = '2.042';
-
 let clicksPerSecond = 0;
 let nextPurchase = 'UnInitialized';
 
-AutoClicker.launch = async function() {
+(async function() {
     'use strict';
 
     await sleep(1000);
@@ -73,9 +66,7 @@ AutoClicker.launch = async function() {
         }
 
     }, 100)
-}
-
-AutoClicker.launch();
+})();
 
 function calcBestBuilding() {
     let bestRoi = 10000000000000;
