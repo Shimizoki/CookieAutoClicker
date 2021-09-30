@@ -1,14 +1,3 @@
-// ==UserScript==
-// @name         Cookie Autoclicker
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       Shimizoki
-// @match        https://orteil.dashnet.org/cookieclicker/
-// @icon         https://cdn.akamai.steamstatic.com/steam/apps/1454400/capsule_616x353.jpg?t=1630523196
-// @grant        none
-// ==/UserScript==
-
 if(CookieAutoClicker === undefined) var CookieAutoClicker = {};
 if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/' + (0? 'Beta/' : '') + 'CCSE.js');
 CookieAutoClicker.name = 'CookieAutoClicker';
