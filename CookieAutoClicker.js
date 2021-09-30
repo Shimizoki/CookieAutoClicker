@@ -182,3 +182,14 @@ CookieAutoClicker.launch = function() {
       return new Promise(resolve => setTimeout(resolve, ms));
     }
 }
+
+if(!CookieAutoClicker.isLoaded){
+    if(CCSE && CCSE.isLoaded){
+    	CookieAutoClicker.launch();
+    }
+    else{
+    	if(!CCSE) var CCSE = {};
+    	if(!CCSE.postLoadHooks) CCSE.postLoadHooks = [];
+    	CCSE.postLoadHooks.push(CookieAutoClicker.launch);
+    }
+}
